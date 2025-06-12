@@ -152,6 +152,7 @@ export interface SelectProps<ValueType = any, OptionType extends BaseOptionType 
   listHeight?: number;
   listItemHeight?: number;
   labelRender?: (props: LabelInValueType) => React.ReactNode;
+  activeOptionFilter?: (searchValue: string, option: OptionType) => boolean;
 
   // >>> Icon
   menuItemSelectedIcon?: RenderNode;
@@ -210,7 +211,9 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
       labelInValue,
       onChange,
       maxCount,
-
+      classNames,
+      styles,
+      activeOptionFilter,
       ...restProps
     } = props;
 
@@ -634,6 +637,9 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
         childrenAsData,
         maxCount,
         optionRender,
+        classNames,
+        styles,
+        activeOptionFilter,
       };
     }, [
       maxCount,
@@ -652,6 +658,9 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
       listItemHeight,
       childrenAsData,
       optionRender,
+      classNames,
+      styles,
+      activeOptionFilter,
     ]);
 
     // ========================== Warning ===========================
