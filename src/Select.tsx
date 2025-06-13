@@ -211,8 +211,6 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
       labelInValue,
       onChange,
       maxCount,
-      classNames,
-      styles,
       activeOptionFilter,
       ...restProps
     } = props;
@@ -637,8 +635,6 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
         childrenAsData,
         maxCount,
         optionRender,
-        classNames,
-        styles,
         activeOptionFilter,
       };
     }, [
@@ -658,8 +654,6 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
       listItemHeight,
       childrenAsData,
       optionRender,
-      classNames,
-      styles,
       activeOptionFilter,
     ]);
 

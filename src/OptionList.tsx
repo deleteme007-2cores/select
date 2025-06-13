@@ -60,8 +60,6 @@ const OptionList: React.ForwardRefRenderFunction<RefOptionListProps, {}> = (_, r
     listItemHeight,
     optionRender,
     activeOptionFilter,
-    classNames: contextClassNames,
-    styles: contextStyles,
   } = React.useContext(SelectContext);
 
   const itemPrefixCls = `${prefixCls}-item`;
